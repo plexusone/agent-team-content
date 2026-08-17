@@ -3,7 +3,7 @@ module github.com/agentplexus/agent-team-content
 go 1.25.0
 
 require (
-	github.com/anthropics/anthropic-sdk-go v1.62.0
+	github.com/anthropics/anthropic-sdk-go v1.63.1
 	github.com/spf13/cobra v1.10.2
 )
 
