@@ -50,7 +50,7 @@ func NewClient(cfg Config) (*Client, error) {
 // Generate sends a prompt to Claude and returns the response.
 func (c *Client) Generate(ctx context.Context, systemPrompt, userPrompt string) (string, error) {
 	params := anthropic.MessageNewParams{
-		Model:     anthropic.Model(c.config.Model),
+		Model:     c.config.Model,
 		MaxTokens: int64(c.config.MaxTokens),
 		Messages: []anthropic.MessageParam{
 			anthropic.NewUserMessage(anthropic.NewTextBlock(userPrompt)),
